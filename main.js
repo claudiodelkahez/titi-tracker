@@ -58,49 +58,26 @@ const errorHandler = (error) => {
 
 const calcularDistancia = () => {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const coordenadasUsuario = {
-                    latitud: position.coords.latitude,
-                    longitud: position.coords.longitude,
-                }
-                const azulCafe = {
-                    latitud: -34.583004,
-                    longitud: -58.429852,
-                }
+        navigator.geolocation.getCurrentPosition((position) => {
+            const coordenadasUsuario = {
+                latitud: position.coords.latitude,
+                longitud: position.coords.longitude,
 
-                // Logs de depuración
-                console.log(
-                    "Coordenadas del usuario:",
-                    coordenadasUsuario.latitud,
-                    coordenadasUsuario.longitud
-                )
-                console.log(
-                    "Coordenadas de Azul Café:",
-                    azulCafe.latitud,
-                    azulCafe.longitud
-                )
-                console.log("Precisión (metros):", position.coords.accuracy)
-
-                const distanciaEnKilometros =
-                    calcularDistanciaEntreDosCoordenadas(
-                        coordenadasUsuario.latitud,
-                        coordenadasUsuario.longitud,
-                        azulCafe.latitud,
-                        azulCafe.longitud
-                    )
-
-                console.log("Distancia calculada (km):", distanciaEnKilometros)
-
-                mostrarDistanciaEnTazas(distanciaEnKilometros)
-            },
-            errorHandler,
-            {
-                enableHighAccuracy: true,
-                timeout: 5000,
-                maximumAge: 0,
+                //latitud: -34.561515079084124,
+                //longitud: -58.44703473758631
             }
-        )
+            const azulCafe = {
+                latitud: -34.583004,
+                longitud: -58.429852,
+            }
+            const distanciaEnKilometros = calcularDistanciaEntreDosCoordenadas(
+                coordenadasUsuario.latitud,
+                coordenadasUsuario.longitud,
+                azulCafe.latitud,
+                azulCafe.longitud
+            )
+            mostrarDistanciaEnTazas(distanciaEnKilometros)
+        }, errorHandler)
     } else {
         document.getElementById("distancia").innerText =
             "La geolocalización no es soportada por este navegador."
