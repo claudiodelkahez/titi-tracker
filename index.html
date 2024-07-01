@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -77,4 +78,117 @@
       defer
       src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
   </body>
+=======
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Titi's coffee time" />
+        <meta name="theme-color" content="#7e99a7" />
+        <!-- Para dispositivos iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent" />
+        <!-- Para dispositivos Android -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#7e99a7" />
+        <!-- Agrega el favicon -->
+        <link
+            rel="icon"
+            href="./img/favicon_io/favicon.ico"
+            type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="./img/favicon_io/favicon.ico"
+            type="image/x-icon" />
+        <!-- Agrega los iconos -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./img/favicon_io/android-chrome-192x192.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/img/favicon_io/android-chrome-512x512.png" />
+        <!-- Agrega el manifest -->
+        <link rel="manifest" href="./manifest.json" />
+        <!-- Etiquetas OG para compartir en redes sociales -->
+        <meta property="og:title" content="Titi's coffee time" />
+        <meta
+            property="og:description"
+            content="¡Titi es genial! No lo sabias?" />
+        <meta property="og:image" content="./img/titi.jpeg" />
+        <!-- Título de la aplicación en iOS -->
+        <meta name="apple-mobile-web-app-title" content="Titi's coffee time" />
+        <!-- Vista predeterminada en iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Fuentes google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <title>Titi's coffee time</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="popup">
+            <div class="popup-mensaje">
+                <button class="boton-cerrar" id="boton-cerrar">✖️</button>
+                <h3>¡Cambia de horario!</h3>
+                <img src="./img/cambio.gif" alt="imgagen de titi" />
+                <h4>Mañana trabaja a la mañana</h4>
+            </div>
+        </div>
+        <div class="popup-pedro">
+            <button class="boton-cerrar" id="boton-cerrar-pedro">✖️</button>
+            <div class="pedro-video">
+                <iframe
+                    class="video"
+                    id="video-pedro"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/3SinWd80yFY?si=7dtt2XMG3t72faSi&autoplay=0&mute=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="container" id="container">
+            <h1>Está titi en Azul?</h1>
+            <div class="horarios">
+                <div id="diaActual"></div>
+                <div id="titi-trabaja-hoy"></div>
+            </div>
+            <h2>Próximos 7 días</h2>
+            <div id="proximos-dias"></div>
+            <div class="boton-distancia-container">
+                <button id="boton-distancia" class="boton-distancia">
+                    Estoy lejos de Azul Cafe?
+                </button>
+                <p id="distancia" class="distancia"></p>
+            </div>
+        </div>
+
+        <div class="boton" id="pedro">
+            <img
+                src="./img/pedropedropedro.gif"
+                alt="pedro"
+                class="pedro-gif" />
+        </div>
+
+        <script type="module" src="./main.js"></script>
+        <script src="distancia.js" type="module"></script>
+
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    </body>
+>>>>>>> cb61ec7 (actualizacion Julio 2024)
 </html>
